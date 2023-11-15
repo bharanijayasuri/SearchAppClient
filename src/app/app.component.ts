@@ -22,11 +22,13 @@ export class AppComponent {
   queryUrl: string='';
   dataReturned : DataObject[]=[];
   showError: boolean = false;
+  noResultsFound: boolean = false;
 
   constructor(private http: HttpClient) {}
 
   onSubmit(searchTerm: string) {
     this.showError = false;
+    this.noResultsFound = false;
     this.dataReturned.length = 0;
     if(searchTerm.length == 0)
     {
@@ -45,6 +47,10 @@ export class AppComponent {
     console.log(searchTerm);
     this.http.post<DataObject[]>(this.queryUrl, httpOptions).subscribe(results => {
       this.dataReturned = results;
+      if(this.dataReturned.length == 0)
+      {
+        this.noResultsFound = true;
+      }
       console.log(this.dataReturned);
     });
   }
