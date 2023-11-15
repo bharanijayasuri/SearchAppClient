@@ -1,6 +1,28 @@
 # SearchAppClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+## This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+
+Step 1 - Identify the version of node.js that Angular requires
+Angular requires an active LTS or maintenance LTS version of Node. Let's confirm your version of node.js. For information about specific version requirements, see the engines property in the package.json file.
+
+From a Terminal window:
+
+Run the following command: node --version
+Confirm that the version number displayed meets the requirements.
+
+## Step 2 - Install the correct version of node.js for Angular
+If you do not have a version of node.js installed, please follow the directions for installation on nodejs.org
+
+## Step 3 - Install the latest version of Angular
+With node.js and npm installed, the next step is to install the Angular CLI which provides tooling for effective Angular development.
+
+From a Terminal window run the following command: npm install -g @angular/cli.
+
+## Step 4 - Install integrated development environment (IDE)
+You are free to use any tool you prefer to build apps with Angular. We recommend the following:
+
+## Visual Studio Code
+As an optional, but recommended step you can further improve your developer experience by installing the Angular Language Service
 
 ## Development server
 
